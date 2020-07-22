@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+    }
+
+    .print {
+      font-size: calc(20px * 0.63);
+      font-weight: bold;
+    }
+
+    .print-container {
+      position: relative;
+      height: calc(130px * 0.63);
+    }
+
+    .print-boxId {
+      position: absolute;
+      top: calc(50px * 0.63);
+      left: calc(120px * 0.63);
+    }
+
+    .print-customer {
+      position: absolute;
+      top: calc(50px * 0.63);
+      left: calc(180px * 0.63);
+    }
+
+    .print-type {
+      position: absolute;
+      top: calc(50px * 0.63);
+      left: calc(380px * 0.63);
+    }
+
+    .print-color-number {
+      position: absolute;
+      top: calc(20px * 0.63);
+      left: calc(580px * 0.63);
+    }
+
+    .print-color-type {
+      position: absolute;
+      top: calc(50px * 0.63);
+      left: calc(590px * 0.63);
+    }
+
+    .print-pb-data {
+      position: relative;
+      margin-bottom: calc(40px * 0.63);
+    }
+
+    .pb-data-container {
+      position: relative;
+      height: calc(40px * 0.63);
+    }
+
+    .fl-bz-container {
+      position: absolute;
+      left: calc(240px * 0.63);
+      top: calc(60px * 0.63);
+      font-size: calc(30px * 0.63);
+    }
+
+    @page {
+      margin: 0px;
+    }
+  </style>
+</head>
+
+<body id="bd">
+  <!-- <div class="print">
+    <div class="print-container">
+      <div class="print-boxId">2-84</div>
+      <div class="print-customer">黄圣爱</div>
+      <div class="print-type">棉毛</div>
+      <div class="print-color-number">2C53382</div>
+      <div class="print-color-type">新深兰</div>
+    </div>
+    <div class="print-pb-data">
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 90px">22</div>
+        <div style="position: absolute;left: 130px;">20</div>
+        <div style="position: absolute;left: 580px;">5</div>
+        <div style="position: absolute;left: 640px;">180</div>
+      </div>
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 90px">22</div>
+        <div style="position: absolute;left: 130px;">20</div>
+        <div style="position: absolute;left: 580px;">5</div>
+        <div style="position: absolute;left: 640px;">180</div>
+      </div>
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 90px">22</div>
+        <div style="position: absolute;left: 130px;">20</div>
+        <div style="position: absolute;left: 580px;">5</div>
+        <div style="position: absolute;left: 640px;">180</div>
+      </div>
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 90px">22</div>
+        <div style="position: absolute;left: 130px;">20</div>
+        <div style="position: absolute;left: 580px;">5</div>
+        <div style="position: absolute;left: 640px;">180</div>
+      </div>
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 90px">22</div>
+        <div style="position: absolute;left: 130px;">20</div>
+        <div style="position: absolute;left: 580px;">5</div>
+        <div style="position: absolute;left: 640px;">180</div>
+      </div>
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 500px">小计</div>
+        <div style="position: absolute;left: 580px;">43</div>
+        <div style="position: absolute;left: 640px;">671.4</div>
+      </div>
+    </div>
+    <div class="print-pb-data" style="margin-bottom: 0px;">
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 90px">脚口</div>
+        <div style="position: absolute;left: 580px;">7</div>
+        <div style="position: absolute;left: 640px;">29.8</div>
+      </div>
+      <div class="pb-data-container" style="margin-bottom: 20px;">
+        <div style="position: absolute;left: 90px">脚口</div>
+        <div style="position: absolute;left: 580px;">7</div>
+        <div style="position: absolute;left: 640px;">29.8</div>
+      </div>
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 90px">脚口</div>
+        <div style="position: absolute;left: 580px;">7</div>
+        <div style="position: absolute;left: 640px;">29.8</div>
+      </div>
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 90px">脚口</div>
+        <div style="position: absolute;left: 580px;">7</div>
+        <div style="position: absolute;left: 640px;">29.8</div>
+      </div>
+      <div class="fl-bz-container">
+        3袋
+      </div>
+    </div>
+    <div class="print-pb-data" style="margin-bottom: 60px;">
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 500px">小计</div>
+        <div style="position: absolute;left: 580px;">43</div>
+        <div style="position: absolute;left: 640px;">671.4</div>
+      </div>
+    </div>
+    <div class="print-pb-data">
+      <div class="pb-data-container" style="margin-bottom: 20px;">
+        <div style="position: absolute;left: 500px">合计</div>
+        <div style="position: absolute;left: 580px;">63</div>
+        <div style="position: absolute;left: 640px;">671.4</div>
+      </div>
+      <div class="pb-data-container" style="margin-bottom: 20px;">
+        <div style="position: absolute;left: 500px">全棉91缸男装</div>
+      </div>
+      <div class="pb-data-container">
+        <div style="position: absolute;left: 550px">2020.7.18</div>
+      </div>
+    </div>
+  </div> -->
+</body>
+
+<script>
+    const { ipcRenderer } = require('electron')
+    ipcRenderer.on('webview-print-render', (event, info) => {
+      // 执行渲染
+      document.getElementById('bd').innerHTML = info
+      ipcRenderer.sendToHost('webview-print-do')
+    })
+</script>
+
+</html>

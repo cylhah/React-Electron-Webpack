@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React-Electron-Webpack</title>
+    <style>
+        @keyframes loading {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        .editor-loading {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .loading-content {
+            width: 100px;
+            height: 40px;
+        }
+        .loading-content img {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 38px;
+            height: 39px;
+            border-radius: 140px;
+            animation: loading 3s linear 0s infinite;
+        }
+        .loading-content label {
+            position: relative;
+            left: 10px;
+            top: -14px;
+            width: 60px;
+            height: 17px;
+            color: #428bca;
+            font-size: 17px;
+            font-family: 'FZZY';
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class='editor-loading'>
+            <div class='loading-content'>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAnCAYAAABjYToLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJDMkJCN0U4M0JDOTExRTk4RjVERUJFQTZFRTc2QjI1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjJDMkJCN0U5M0JDOTExRTk4RjVERUJFQTZFRTc2QjI1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MkMyQkI3RTYzQkM5MTFFOThGNURFQkVBNkVFNzZCMjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MkMyQkI3RTczQkM5MTFFOThGNURFQkVBNkVFNzZCMjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz49S367AAAC2klEQVR42uyYS2gUQRCGZ8IighjEB4pJEDWIj4NGDdlTEgQNmouICCKoqBc13lQwggl6yMODCB68+EIM3kzQTVZQExEf+ESimBgRH1EPQUQ0LzFu/oJaGIbumk56dlzBgo+Z7Z6p/be3uqq73UT7C8fSGsEBRXsxeBz08rryJcr2HEtRizWiyFrBxPE6thW2XeibAUrG6zgW0F8BXHAbDCr6hwPe/xX2iMXBK5AEbeAtWKt47qLg+yN4GKaw+eA+WOhpm8Uxs9L37GtQp/AxBCrBiOZ7J7Cv6WMRdlL4IccUbdU8miS8E5wHhXyvskngGXgEelo7Xi4wjbEVgrC4pj3JmNh6ns1kU8BhsM1kxHoFp+8de/PH3RXTEaO81K5xWh+CsB5QynQjwTabCusAhxRBfQpcdsKxO8yY8xiNTAJs4jxGKeOuE6FJCbZTmFkZtxwnSy3rhVWlEx64B9b8bWExnm17PW2Uta+DLaApKiGoALtwmUv1Fymky8VCMaV59juYDQYyKYgWihB1Brc7uInqa7kkzOEamMzwYM0B7/wlLij4f0TwL6rWbN8kYb1RJFX8lV9wOeqrx0dI2H7F8/0c/JEYxNXgsoxuafLh8xuXd0lxFjgTPAHHwaeIRIkl6QHY+D/z/8vCpNUFJbwyXvbQGv1ElMJczRGBNxOnrQVsAH9C+N59PAspsZ7GBOgzEUa763Mahwd5xtrYTbDK8/kzmAdxw0ExVi043WMpqsgnyuF6vNUk+CcLjnMthek2uAUmwq4JjhNC305Qy+cdOqMd/m9F+wWTGKOd8gcwVeEgX1ER8sAt4N1Rt3F5UdlSjuEirsdViK8WkxHr5+OjS3zCQ+cQV8FyTZlq8olKL5c2a4Q9Z1+L6JxEJUpKF2mbxuL7hAQ9yIckfrsBVtvWSp19tQh0m3etSxIl27OavsZMlSRT282nNhXs7ydoAE+tSlIqlcrKIj4qwAAEY6O60iI0hQAAAABJRU5ErkJggg=="/>
+                <label>加载中</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

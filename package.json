@@ -1,0 +1,60 @@
+{
+  "name": "react-electron-webpack",
+  "version": "1.0.0",
+  "description": "react-electron-webpack",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --config-name start",
+    "build": "cross-env CHANNEL=release webpack --mode production --config-name build",
+    "ewinb": "electron ./build/main.js",
+    "ewind": "cross-env CHANNEL=DEBUG electron .",
+    "EBuild": "electron-packager ./build ReactElectronWebpack --win --out ./appOutput --app-version 1.0.0 --electron-version=9.1.0 --arch=x64 --icon=./icon.ico --overwrite"
+  },
+  "keywords": [
+    "Electron",
+    "React",
+    "webpack"
+  ],
+  "author": "cylhah",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "^1.12.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^6.0.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.2.0",
+    "electron": "^9.1.0",
+    "electron-packager": "^15.0.0",
+    "file-loader": "^4.2.0",
+    "happypack": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "redux-logger": "^3.0.6",
+    "sass-loader": "^9.0.2",
+    "sass-resources-loader": "^2.0.1",
+    "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "core-js": "^3.2.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-hot-loader": "^4.12.21",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4"
+  }
+}

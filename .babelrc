@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "modules": false,
+      "useBuiltIns": "usage",
+      "targets": {
+        "browsers": ["> 0.1%", "ios >= 8", "android >= 4"]
+      },
+      "corejs": 3
+    }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    ["import", { "libraryName": "antd-mobile", "style": "css" }]
+  ]
+}

@@ -1,0 +1,12 @@
+﻿/node_modules
+/dist
+/build
+/appOutput
+/output
+/release
+/template
+/package-lock.json
+/yarn.lock
+/.idea
+/.vscode
+/.history

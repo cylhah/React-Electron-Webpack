@@ -1,1 +1,1 @@
-# React-Electron-Webpack
+# dyes-data-manager
